@@ -4,12 +4,12 @@ export const config = {
   "dev": {
     "username": process.env.POSTGRES_USERNAME,
     "password": process.env.POSTGRES_PASSWORD,
-    "database": "udagramphongdev",
-    "host": "udagramphongdev.ci4o15xd5c6o.ap-southeast-1.rds.amazonaws.com",
-    "dialect": "postgres",
+    "database": process.env.POSTGRES_DATABASE,
+    "host": process.env.POSTGRES_HOST,
+    "dialect": process.env.POSTGRES_DIALECT,
     "aws_region": process.env.AWS_REGION,
     "aws_profile": process.env.AWS_PROFILE,
-    "aws_media_bucket": "s3-udagram-phong"
+    "aws_media_bucket": process.env.AWS_MEDIA_BUCKET
   },
   "jwt": {
     "secret": "hello"
